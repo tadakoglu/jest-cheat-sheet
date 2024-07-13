@@ -16,9 +16,9 @@ To reformat run:
 
 _Migrating to Vitest? [Check out Vitest cheat sheet](https://github.com/sapegin/vitest-cheat-sheet)._
 
-_I’m writing [a book on clean code for frontend developers](https://sapegin.me/book/)._
-
 _I recommend [Mrm](https://github.com/sapegin/mrm/tree/master/packages/mrm-task-jest) and [jest-codemods](https://github.com/skovhus/jest-codemods) for single-command Jest installation and easy migration from other frameworks._
+
+**Check out [my book on clean code for frontend developers](https://sapegin.me/book/).**
 
 ## Table of contents
 
