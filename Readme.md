@@ -629,6 +629,8 @@ Add [babel-jest](https://github.com/facebook/jest/tree/master/packages/babel-jes
 - [Modern React testing, part 1: best practices](https://blog.sapegin.me/all/react-testing-1-best-practices/) by Artem Sapegin
 - [Modern React testing, part 2: Jest and Enzyme](https://blog.sapegin.me/all/react-testing-2-jest-and-enzyme/) by Artem Sapegin
 - [Modern React testing, part 3: Jest and React Testing Library](https://blog.sapegin.me/all/react-testing-3-jest-and-react-testing-library/) by Artem Sapegin
+- [Modern React testing, part 4: Cypress and Cypress Testing Library](https://sapegin.me/blog/react-testing-4-cypress/) by Artem Sapegin
+- [Modern React testing, part 5: Playwright](https://sapegin.me/blog/react-testing-5-playwright/) by Artem Sapegin
 - [React Testing Examples](https://react-testing-examples.com/)
 - [Testing React Applications](https://youtu.be/59Ndb3YkLKA) by Max Stoiber
 - [Effective Snapshot Testing](https://blog.kentcdodds.com/effective-snapshot-testing-e0d1a2c28eca) by Kent C. Dodds
