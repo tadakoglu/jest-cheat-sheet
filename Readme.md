@@ -1,3 +1,11 @@
+<!--
+To update TOC run:
+  npx markdown-toc --maxdepth 3 -i Readme.md
+
+To reformat run:
+  npx prettier --print-width 100 --single-quote --no-semi --prose-wrap never --write Readme.md
+-->
+
 <div align="center" markdown="1">
 
 <img src="https://raw.githubusercontent.com/facebook/jest/main/website/static/img/jest-readme-headline.png" width="200">
@@ -6,11 +14,13 @@
 
 </div>
 
+_Migrating to Vitest? [Check out Vitest cheat sheet](https://github.com/sapegin/vitest-cheat-sheet)._
+
+_I’m writing [a book on clean code for frontend developers](https://sapegin.me/book/)._
+
 _I recommend [Mrm](https://github.com/sapegin/mrm/tree/master/packages/mrm-task-jest) and [jest-codemods](https://github.com/skovhus/jest-codemods) for single-command Jest installation and easy migration from other frameworks._
 
-<!-- To reformat run: npx prettier --print-width 100 --single-quote --no-semi --prose-wrap never --write Readme.md -->
-
-<!-- To update TOC run: npx markdown-toc --maxdepth 3 -i Readme.md -->
+## Table of contents
 
 <!-- toc -->
 
@@ -266,13 +276,13 @@ test('async test', () => {
 })
 ```
 
-Note that you can also do this per file, outside any `describe` and `test`:
+You can also do this per file, outside any `describe` and `test`:
 
 ```js
 beforeEach(expect.hasAssertions)
 ```
 
-This will verify the presense of at least one assertion per test case. It also plays nice with more specific `expect.assertions(3)` declarations.
+This will verify the presence of at least one assertion per test case. It also plays nice with more specific `expect.assertions(3)` declarations.
 
 In addition, you can enforce it globally, across all test files (instead of having to repeat per file) by adding the exact same line into one of the scripts referenced by the `setupFilesAfterEnv` configuration option. (For example, `setupTests.ts` and that is referenced via a `setupFilesAfterEnv: ['<rootDir>/setupTests.ts']` entry in `jest.config.ts`.)
 
@@ -398,7 +408,8 @@ jest.mock('lodash/memoize', () => (a) => a, { virtual: true }) // The original l
 
 [jest.mock docs](https://jestjs.io/docs/en/jest-object#jestmockmodulename-factory-options)
 
-> Note: When using `babel-jest`, calls to `jest.mock` will automatically be hoisted to the top of the code block. Use `jest.doMock` if you want to explicitly avoid this behavior.
+> [!NOTE]  
+> When using `babel-jest`, calls to `jest.mock` will automatically be hoisted to the top of the code block. Use `jest.doMock` if you want to explicitly avoid this behavior.
 
 ### Mock modules using a mock file
 
@@ -414,7 +425,8 @@ jest.mock('lodash/memoize', () => (a) => a, { virtual: true }) // The original l
     jest.mock('lodash/memoize')
     ```
 
-> Note: When using `babel-jest`, calls to `jest.mock` will automatically be hoisted to the top of the code block. Use `jest.doMock` if you want to explicitly avoid this behavior.
+> [!NOTE]  
+> When using `babel-jest`, calls to `jest.mock` will automatically be hoisted to the top of the code block. Use `jest.doMock` if you want to explicitly avoid this behavior.
 
 [Manual mocks docs](https://jestjs.io/docs/en/manual-mocks)
 
@@ -462,7 +474,8 @@ fn.mockReset() // Clears and removes any mocked return values or implementations
 fn.mockRestore() // Resets and restores the initial implementation
 ```
 
-> Note: `mockRestore` works only with mocks created by `jest.spyOn`.
+> [!NOTE]  
+> The `mockRestore` works only with mocks created by `jest.spyOn`.
 
 For all mocks:
 
@@ -524,7 +537,8 @@ test('kill the time', () => {
 
 Use [jest.runOnlyPendingTimers()](https://jestjs.io/docs/en/timer-mocks#run-pending-timers) for special cases.
 
-**Note:** you should call `jest.useFakeTimers()` in your test case to use other fake timer methods.
+> [!NOTE]  
+> You should call `jest.useFakeTimers()` in your test case to use other fake timer methods.
 
 ## Data-driven tests (Jest 23+)
 
@@ -643,6 +657,6 @@ This software has been developed with lots of coffee, buy me one more cup to kee
 
 ## Author and license
 
-[Artem Sapegin](http://sapegin.me/), a frontend engineer at [Omio](https://omio.com/) and the creator of [React Styleguidist](https://react-styleguidist.js.org/). I also write about frontend at [my blog](https://blog.sapegin.me/).
+[Artem Sapegin](https://sapegin.me/), a frontend engineer at [Stage+](https://www.stage-plus.com) and the creator of [React Styleguidist](https://react-styleguidist.js.org/). I also write about frontend at [my blog](https://sapegin.me/blog/).
 
 CC0 1.0 Universal license, see the included [License.md](/License.md) file.
